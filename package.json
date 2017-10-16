@@ -5,7 +5,8 @@
   "main": "server.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "node server.js"
+    "start": "node dist/server.js",
+    "build": "babel server.js --out-dir dist --presets babel-preset-stage-0 --plugins transform-es2015-modules-commonjs"
   },
   "author": "",
   "license": "ISC",
