@@ -8,7 +8,6 @@ class HttpProtocolStream extends Transform {
     this.requestHandler = requestHandler;
   }
 
-  // TODO: if error check callback and flush method
   _transform(chunk, encoding, callback) {
     this.requestBuffer += chunk.toString();
     const headersEndFlag = '\r\n\r\n';

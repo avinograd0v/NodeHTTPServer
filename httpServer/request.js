@@ -4,7 +4,6 @@ class Request {
   }
 
   _parseHttpRequest(requestString) {
-    // TODO: implement parsing
     const httpMethod = requestString.substr(0, requestString.indexOf(" "));
     const start = requestString.indexOf(httpMethod) + httpMethod.length + 1;
     const length = requestString.lastIndexOf("HTTP") - start - 1;

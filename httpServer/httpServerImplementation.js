@@ -10,7 +10,6 @@ class HttpServer extends net.Server {
     this.on('connection', this._connectionListener);
     this.listen(port);
 
-    // TODO: check about this.serve
     this.serve = serve;
 
     this.router = {

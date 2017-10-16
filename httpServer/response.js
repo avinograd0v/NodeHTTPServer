@@ -2,7 +2,6 @@ import pathMod from 'path';
 import fs from 'fs-extra';
 import {STATUS_CODES, SERVER, CONNECTION, EXTENTIONS} from "./constants";
 
-// TODO: convert to stream
 class Response {
   constructor(stream, serve) {
     this.stream = stream;
