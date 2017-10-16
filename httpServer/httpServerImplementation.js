@@ -1,7 +1,7 @@
 import net from 'net';
 import Request from './request';
 import Response from './response';
-import HttpProtocolStream from './httpStream';
+import HttpProtocolStream from './HttpStream';
 
 class HttpServer extends net.Server {
   constructor({ port, serve }) {
@@ -87,4 +87,4 @@ class HttpServer extends net.Server {
   }
 }
 
-module.exports = HttpServer;
+export default HttpServer;

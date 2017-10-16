@@ -1,6 +1,8 @@
-const httpServer = require('./httpServer/httpServerImplementation');
-const cluster = require('cluster');
-const config = require('./helpers/configParser')('/etc/httpd.conf');
+import httpServer from './httpServer/httpServerImplementation';
+import cluster from 'cluster';
+import configParser from './helpers/configParser';
+
+const config = configParser('/etc/httpd.conf');
 
 const numCPUs = config.cpu_limit;
 

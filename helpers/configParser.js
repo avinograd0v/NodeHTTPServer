@@ -1,4 +1,4 @@
-const loadConfig = require('load-config-file');
+import loadConfig from 'load-config-file';
 
 const confParseRegexp = /^(\w+)\s([^\s]+)/mg;
 loadConfig.register('.conf', context => {
@@ -13,4 +13,4 @@ loadConfig.register('.conf', context => {
   return parsedObject
 });
 
-module.exports = filename => loadConfig(filename);
+export default filename => loadConfig(filename);
